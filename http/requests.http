@@ -1,0 +1,47 @@
+
+curl --location 'http://localhost:8080/products' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "Monitor Dell 27",
+    "value": 1500.00
+}'
+
+
+curl --location 'http://localhost:8080/products' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "lavadora LG",
+    "value": 5000.00
+}'
+
+
+curl --location --request GET 'http://localhost:8080/products' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "Monitor Dell 27",
+    "value": 1500.00
+}'
+
+curl --location 'http://localhost:8080/products/106691b0-0942-411c-bb52-c60d03f9d423'
+
+curl --location 'http://localhost:8080/products/33591a87-6246-4e0b-aed3-6a8fc044636d'
+
+
+
+curl --location --request PUT 'http://localhost:8080/products/106691b0-0942-411c-bb52-c60d03f9d423' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "Monitor Dell 27",
+    "value": 4500.00
+}'
+
+
+curl --location 'http://localhost:8080/products' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "TEste",
+    "value": 5700.00
+}'
+
+
+curl --location --request DELETE 'http://localhost:8080/products/106691b0-0942-411c-bb52-c60d03f9d423'
